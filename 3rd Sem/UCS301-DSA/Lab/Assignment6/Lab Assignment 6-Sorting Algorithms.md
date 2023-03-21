@@ -14,4 +14,4 @@ f. Counting Sort
 
 2. A slightly improved selection sort.
 
-https://www.geeksforgeeks.org/sorting-algorithm-slightly-improves-selectionsort/?ref=r
+https://www.geeksforgeeks.org/sorting-algorithm-slightly-improves-selectionsort/?ref=rp
