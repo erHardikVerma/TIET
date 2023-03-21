@@ -1,0 +1,58 @@
+--Lab Assignment 2
+--Table Created
+--create table Emp(EmpNo int,Ename varchar(20),EJob varchar(20),Salary int,Commission int,DeptNo int)
+
+--Rows Inserted
+--insert into Emp values(1,'Raj','Lineman',1000,200,005)
+--insert into Emp values(2,'Hardik','CEO',5000,3000,001)
+--insert into Emp values(3,'Bhunesh','Assistant',3000,1000,002)
+--insert into Emp (EmpNo,Ename,EJob,Salary,DeptNo) values(4,'Abhishek','Clerk',2500,20)
+--insert into Emp values(5,'Abhishek','Saleperson',3500,2000,10)
+--insert into Emp values(6,'Akansha','Saleperson',5500,2000,10)
+
+--q1
+--Select EmpNo,Ename from Emp where DeptNo=10
+
+--q2
+--Select Ename from Emp where EJob='Clerk'and Salary >3000
+
+--q3
+--Select Ename from Emp where EJob='Clerk,Salesperson'
+
+--q4
+--Select Ename from Emp where Salary(2500)
+
+--q5
+--q6
+--q7
+--select DeptNo,Salary from Emp order by DeptNo,Salary asc
+
+--q8
+--Select Ename from Emp where Ename LIKE'%a%a%' or Ename Like  '%A%A%'
+
+--q9
+--Select Ename from Emp where Ename LIKE'_b%' or Ename Like  '_B%'
+
+-- number of underscores display number of charcater (n+1)(eg. q9 where second letter is b and number of underscores used is 1) in string
+
+--q10
+--Select Ename from Emp where Ename LIKE'a%' or Ename Like  '%a' or Ename like '%A' or Ename like 'A%'
+
+--q11
+--Select max(salary) ,min(salary), avg(salary) from emp where DeptNo=10
+
+--q12
+--select count(Ename) from Emp where DeptNo=20;
+
+--q13
+--select sum(salary) from Emp where EJob='Clerk'
+
+--q14
+--select sysdate as system_date from Emp
+
+--q15
+select (12*12)/13 from Emp where Ename='Raj'
+
+--q16
+select * from Emp
+where upper(Ename)='RAJ';
