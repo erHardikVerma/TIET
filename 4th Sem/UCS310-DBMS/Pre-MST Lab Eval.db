@@ -1,0 +1,62 @@
+--DBMS PreMst Lab Evaluation 
+--Hardik Verma, 102283044, 2CO28
+
+--flights
+--create table flights(
+flno int primary key,
+ffrom varchar(20), 
+fto varchar(20), 
+distance int,
+departure varchar(10),
+arrival varchar(20))
+
+--insert into flights values(501,'Pune','Mumbai',1800,'9:50 AM','11:00 AM')
+--insert into flights values(502,'Hyderabad','Delhi',2900,'10:30 AM','1:00 PM')
+--insert into flights values(503,'Bonn','Madras',4150,'3:00 AM','2:00 PM')
+--insert into flights values(504,'London','Delhi',7050,'2:00 PM','11:30 AM')
+
+--aircraft
+--create table aircraft(aid int primary key,aname varchar(20),cruisingrange int)
+
+
+--insert into aircraft values(701,'Boeing',2100)
+--insert into aircraft values(702,'AirIndia',3100)
+--insert into aircraft values(703,'Jetairways',2500)
+
+--employees
+--create table employees(eid int primary key,ename varchar(20),salary int)
+
+--insert into employees values(201,'Hardik',25000)
+--insert into employees values(202,'Namit',20000)
+--insert into employees values(203,'Jashan',21000)
+
+--create table certified(eid int primary key references employees(eid), 
+aid int unique references aircraft(aid) not null) 
+
+
+--insert into certified values(201,701)
+--insert into certified values(202,702)
+--insert into certified values(203,703)
+
+--q1
+/* select eid from  certified
+where aid in (select aid from aircraft where lower(aname)='boeing'); */
+
+--q2
+/* select eid from  employees
+where salary in (select max(salary) from employees); */
+
+--q3
+--select eid from certified where count(aid)=max
+
+--q4
+select ename from employees,aircraft,certified 
+where aircraft.aid=certified.aid and certified.eid=employees.eid
+and cruisingrange = '>3000'
+or aname is not 'Boeing' 
+
+--q5
+/* select aid from aircraft ,flights
+where aircraft.aid=flights.aid
+and ffrom ='Bonn' and  fto = 'Madras' */
+
