@@ -1,0 +1,26 @@
+--Lab3 Assignment4
+
+--Constraints
+--primary key = unique,not null
+
+
+--q3
+--create table st(Rno Number,Sclass char(10),Marks Number,primary key(Rno,SClass),check(marks>0));
+
+--insert into st values(1,'1',30);
+--insert into st values(1,'2',30);
+--insert into st values(1,'1',60);
+--insert into st values(3,'1',0);
+
+--select constraint_name, constraint_type, table_name from user_constraints where table_name='ST';
+
+
+--q8
+--create table emp(empno int,ename varchar(30),ejob varchar(20) check(job in('prof','ap','lect')),sal int not null, deptno int,primary key(emp no),constraint fk foreign key(deptno) references dept(deptno));
+
+--insert into emp values(1,'Hardik','Prof',20000,1);
+--insert into emp values(4,'Bhunesh','ap',15000,1);
+--insert into emp values(5,'Namit','Salesperson',12000,2);
+--insert into emp_t(empno,ename,ejob,deptno) values(6,'abcd','lect',1)
+
+--insert into emp_t values(6,'Siddarth','lect',15000,3);
