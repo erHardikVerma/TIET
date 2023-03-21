@@ -1,0 +1,50 @@
+--Lab1 Assignment1
+
+/*q1
+create table students(RollNumber int,FullName varchar(20),DOB date,Gender varchar(6),Semester int,College varchar(30),City varchar(20),Marks int) */
+
+/* 1) int has no data size along with it
+2) char is replaced with [varchar]; it also has datasize along with it
+3) date is simply written as date
+4) (--) Double Dash are used for comments */
+
+/*q2 
+insert into students values (3,'Karan',to_date('2001-07-21','YYYY-MM-DD'),'Male',4,'Thapar','Zirakpur',22)
+insert into students values (4,'Hardik Verma',to_date('2002-06-14','YYYY-MM-DD'),'Male',4,'Thapar','Ludhiana',35)
+insert into students values (5,'Jashan',to_date('2003-09-15','YYYY-MM-DD'),'Male',4,'Thapar','Patiala',29)
+insert into students values (7,'Rakshit',to_date('2002-08-21','YYYY-MM-DD'),'Male',4,'Thapar','Amritsar',53)
+insert into students values (9,'Vaibhav',to_date('2002-11-03','YYYY-MM-DD'),'Male',4,'Thapar','Patiala',34) */
+
+/* 1) (values) is the keyword for adding values of different columns in a single row.
+2) varchar values are in 'Name'
+3) int values are written just as it is
+4) date is written in format [to_date('2002-06-14','YYYY-MM-DD')] (YYYY-MM--DD is the type of format used) */
+
+/*q3
+select * from students */
+
+/*q4
+desc students */
+
+/*q5
+select RollNumber,FullName,Semester from students where City='Ludhiana' */
+
+/*q6
+select *from students 
+order by  Marks desc --(asc for ascending order; desc for descending order) */
+
+/*q7
+update students
+set Marks=89 where Marks=54 */
+
+/*q8
+update students
+set Marks=59,FullName='Hardik' where Marks=50 */
+
+/*q9
+delete from students
+where marks=52 */
+
+/*q10
+delete from students
+where marks<=53 */
