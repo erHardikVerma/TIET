@@ -1,0 +1,72 @@
+--Lab 3
+
+--q1
+--select chr(65) from dual
+
+--select concat('alpha','beta') from dual
+
+--select instr('alphabeta','a') from dual
+--check weather that character is present in string or not 
+--if present then 1, if not then 0
+
+--q1_13. upper(string):
+--select upper('HELLO woRlD') from dual;
+
+--q1_14. translate(char ,from string ,to string):
+--select translate('BBBBCCFDEFG', 'BCD', 'DEC') from dual;
+
+--q1_15. abs(n):
+--select abs(-31) from dual;
+
+--q1_16. ceil(n):
+--select ceil(45.3) from dual;
+
+--q1_17. cos(n):
+--select cos(0) from dual;
+
+--q1_18. exp(n):
+--select exp(1) from dual;
+
+--q1_19. floor(n):
+--select floor(303.32) from dual;
+
+--q1_20. mod(m ,n):
+--select mod(10, 3) from dual;
+
+--q1_21. power(x ,y):
+--select power(2, 5) from dual;
+
+--q1_22. round(x [,y]):
+--select round(30.56) from dual;
+
+--q1_23. sign(n):
+--select sign(0) from dual;
+
+--q1_24. sqrt(n);
+--select sqrt(25) from dual;
+
+--q1_25. trunc(x ,n):
+select trunc(25.123) from dual;
+
+--q2
+--select to_char(sysdate,'hh24:mi:ss') date_and_time from dual
+
+--q3
+--create table Emp(EmpNo int,Ename varchar(20),EJob varchar(20),Salary int,Commission int,DeptNo int)
+--insert into Emp values(1,'Hardik','CEO',3100,310,50)
+--insert into Emp values(2,'Akshara','Clerk',2200,220,10)
+--insert into Emp values(3,'Abhishek','Clerk',2500,250,10)
+--insert into Emp values(4,'Akansha','Salesperson',2700,270,20)
+--insert into Emp (EmpNo,Ename,EJob,Salary,DeptNo) values(5,'Raj','Helper',1200,30)
+
+--q3
+--select SALARY+COMMISSION from EMP
+
+--q4
+--alter table Emp add HireDate DATE;
+--select * from Emp
+--update emp set HireDate='25-Jan-2005' where EmpNo=1
+--update emp set HireDate='5-Feb-1985' where EmpNo=2
+--update emp set HireDate='5-Jan-2023' where EmpNo=3
+--update emp set HireDate='5-Apr-2004' where EmpNo=4
+--update emp set HireDate='15-May-2003' where EmpNo=5
