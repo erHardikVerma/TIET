@@ -1,0 +1,49 @@
+MST_Kruskal(G,w)
+A={} //Set to store the final result
+for each vertex
+{
+    Make_Set(vertex);
+}
+sort the edges in increasing order of weights w
+for every edges(u,v) of graph G taken in increasing order of weight
+{
+    if(FindParent(u)!=FindParent(v))
+    {
+        A=A U {(u,v)};
+        Union(u,v);
+    }
+}
+
+Make_Set(vertex)
+{
+    vertex.parent=vertex;
+    vertex.rank=0;
+}
+
+FindParent(vertex)
+{
+    if(vertex!=vertex.parent)
+    {
+        vertex.parent=FindParent(vertex.parent)
+    }
+    return vertex.parent;
+}
+
+Union(u,v)
+{
+    Link(FindParent(u),FindParent(v))
+}
+
+Link(x,y)
+{
+    if(x.rank>y.rank)
+        y.parent=x;
+    else
+    {
+        x.parent=y;
+        if(x.rank==y.rank)
+        {
+            y.rank=y.rank+1;
+        }
+    }
+}
