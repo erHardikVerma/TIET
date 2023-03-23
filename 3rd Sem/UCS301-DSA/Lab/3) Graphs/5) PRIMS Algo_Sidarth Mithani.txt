@@ -1,0 +1,39 @@
+
+
+key[] //Array to store key of every verty intiialized with infinity for all the elements
+parent[] //To the store the parent of a vertex
+bool visited[] //bool type array to keep record of the visited vertex
+
+start //starting index
+visited[start]=true
+key[start]=0;
+parent[start]=-1;
+for c=0;c<=no.of vertices -1;++c
+{
+    u = minkey(key,visited);
+    visited[u]=true;
+    for every adjacent vertex of vertex u
+    {
+        if(weight(u,adj_vertex)<key[adj_vertex])
+        {
+            adj_vertex.parent=u;
+            key[adj_vertex]=weight(u,adj_vertex);
+        }
+    }
+}
+
+//Function to find the minimum key among the non visited vertices
+minkey(key,visited)
+{
+    minimum=INT_MAX
+    min_index;
+    for every vertex of graph
+    {
+        if(visited[vertex]==0&&key[vertex]<minimum)
+        {
+            minimum=key[vertex];
+            min_index=vertex;
+        }
+    }
+    return min_index;
+}
