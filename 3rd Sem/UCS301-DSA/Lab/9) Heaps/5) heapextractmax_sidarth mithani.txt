@@ -1,0 +1,8 @@
+heap_extract_max()
+{
+    max=arr[1];
+    arr[1]=arr[heapsize];
+    heapsize--;
+    max_heapify(arr,1)
+    return max
+}
