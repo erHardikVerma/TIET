@@ -1,0 +1,8 @@
+step 1 buildheap(arr)
+step 2
+    for i:arr.length down to 2 
+    {
+        swap(arr[1],arr[heapsize])
+        heapsize--
+        max_heapify(A,1)
+    }
