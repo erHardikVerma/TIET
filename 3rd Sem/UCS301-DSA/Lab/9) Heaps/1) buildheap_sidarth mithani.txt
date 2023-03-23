@@ -1,0 +1,8 @@
+buildheap()
+{
+    //Apply the max_heapify function for every tree element except the tree leaves
+    for i=floor(n/2) to 1
+    {
+        max_heapify(arr,i)
+    }
+}
