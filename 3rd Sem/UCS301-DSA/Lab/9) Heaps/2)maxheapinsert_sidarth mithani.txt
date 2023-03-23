@@ -1,0 +1,7 @@
+
+max_heap_insert(arr,new_element)
+{
+    heapsize++;
+    arr[heapsize]=-infinity
+    heap_increase_key(new_element,arr,heapsize)
+}
