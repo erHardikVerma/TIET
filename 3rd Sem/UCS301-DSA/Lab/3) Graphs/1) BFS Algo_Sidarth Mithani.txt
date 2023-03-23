@@ -1,0 +1,27 @@
+bool visited[]  //to store the if the array is visited or not 
+distance[]      //to store the distance of a node from the start
+parent[]      //to store the parent of a node 
+                //Set all values of visited to false and distance to infinity(INT_MAX)
+queue Q         //Creating a queue of size>max(vertex,edges)
+input start //Starting index
+distance[start]=0;
+visited[start]=true;
+cout<<start
+Q.push(start);
+while(!Q.empty())
+{
+    int current_vertex=Q.pop();
+    cout<<current_vertex;
+    distance=distance+1;
+    for (i=adjList[current_vertex].start;i!=adjList[current_vertex].end ;++i)
+    {
+        adj_vertex=i;
+        if(visited[adj_vertex]==false)
+        {
+            Q.push(i);
+            distance[adj_vertex]=distance;
+            parent[adj_vertex]=current_vertex;
+            visited[adj_vertex]=true;
+        }
+    }
+}
