@@ -1,0 +1,61 @@
+bool included[] //true if vertex i is included in the shortest path
+int distance[] //To store the minimum distances from the source
+for every vertex
+{
+    distance[vertex]=infinity;
+    included[vertex]=false
+    vertex.parent=nil
+}
+
+source.distance=0;
+for( count =0;count<vertices-1;++i)
+{
+    u=mindistance(distance,included)
+    included[u]=true
+    for i:every adjacent vertex of u
+    {
+        check(u,adj_vertex,w)
+    } 
+}
+
+check(u,adj_vertex,w)
+{
+    if(v.distance>u.distance+weight(u,v))
+    {
+        v.distance=u.distance+weight(u,v);
+        v.parent=u;
+    }
+}
+
+mindistance(distance[],included[])
+{
+    int minimun=INT_MAX;
+    int min_index;
+    for every vertex of graph G
+    {
+        if(included[vertex]=false&&distance[vertex]<minimum)
+        {
+            minimum=distance[vertex];
+            min_index=vertex;
+        }
+    }
+    return min_index;
+}
+
+
+function Dijkstra(Graph, source):
+  for each vertex v in Graph:
+    distance[v] = infinity
+    
+ distance[source] = 0
+ G = the set of all nodes of the Graph
+ 
+ while G is non-empty:
+     Q = node in G with the least dist[ ]
+     mark Q visited
+     for each neighbor N of Q:
+         alt_dist = distance[Q] + dist_between(Q, N)
+         if alt-dist < distance[N]
+             distance[N] := alt_dist
+             
+ return distance[ ]
