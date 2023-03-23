@@ -1,0 +1,14 @@
+heap_increase_key(new_key,arr,i)
+{
+    if(new_key<arr[i])
+        error
+    else
+    {
+        arr[i]=new_key;
+        while(i>1&&arr[parent(i)]<arr[i]])
+        {
+            swap(arr[i],arr[parent(i)])
+            i=parent(i)
+        }
+    }
+}
