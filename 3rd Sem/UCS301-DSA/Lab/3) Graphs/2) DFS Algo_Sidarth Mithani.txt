@@ -1,0 +1,59 @@
+//Using Recursion 
+
+main()
+{
+    G is the graph
+    color[] //white ---> Not visited
+            //gray ---> visited
+            //black ---> finished execution    
+    for every vertex in graph
+    {
+        if(color[vertex]==white)
+        {
+            DFS(G,vertex);
+        }
+    }
+}
+
+DFS(G,vertex)
+{
+    ++time;
+    color[vertex]==grey;
+    vertex.discovery=time;
+    for every adjacent vertex of vertex
+    {
+        if(color[adj_vertex]=white)
+        {
+            DFS(G,adj_vertex)
+        }
+    }
+    color[vertex]=black
+    ++time
+    vertex.finished=time;
+}
+
+//Sort and print all vertex according to the discovery time to get DFS 
+
+
+
+
+
+//Using Stacks
+visited[] //bool type array to store if a vertex have been visited or not
+int start // for the starting index
+Stack S //Stack to find the DFS of the given graph
+S.push(start);
+while(!S.empty())
+{
+    current_vertex=S.pop()
+    visited[current_vertex]=true;
+    cout<<current_vertex;
+    for(i=adjList[current_vertex].start;i!=adjList[current_vertex].start;++i)
+    {
+        adj_vertex=i;
+        S.push(adj_vertex);
+    }
+}
+
+//every push time is the discovery time for that vertex
+//every pop operation at a particular time is the finish time for that vertex
