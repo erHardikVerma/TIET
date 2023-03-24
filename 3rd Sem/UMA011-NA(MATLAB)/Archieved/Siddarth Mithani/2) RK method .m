@@ -14,6 +14,6 @@ for i=1:n
     k2=h*f(x(i)+h/2,y(i)+k1/2);
     k3=h*f(x(i)+h/2,y(i)+k2/2);
     k4=h*f(x(i)+h,y(i)+k3);
-    y(i+1)=y(i)+(k1+(k3+k2)*2+k4);
+    y(i+1)=y(i)+(k1+(k3+k2)*2+k4)/6;
 end
 y
