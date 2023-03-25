@@ -1,0 +1,18 @@
+Introduction: 
+Data, data processing requirement, desirable characteristics of an ideal data processing system, 
+traditional file-based system, its drawback, concept of data dependency, Definition of database, 
+database management system, 3-schema 0architecture, database terminology, benefits of DBMS.
+
+Relational Database: Relational data model: Introduction to relational database theory:
+definition of relation, keys, relational model integrity rules.
+
+Database Analysis: Conceptual data modeling using E-R data model -entities, attributes,
+relationships, generalization, specialization, specifying constraints, Conversion of ER
+Models to Tables, Practical problems based on E-R data model.
+
+SQL: Introduction to SQL, DDL aspect of SQL, DML aspect of SQL – update, insert, delete
+& various form of SELECT- simple, using special operators, aggregate functions, group by
+clause, sub query, joins, co-related sub query, union clause.
+
+Database Design: Functional Dependency, Attribute Closure, Functional Dependency
+Closure, Candidate Key and Super Key identification, Normalization- 1NF, 2NF, 3NF.
