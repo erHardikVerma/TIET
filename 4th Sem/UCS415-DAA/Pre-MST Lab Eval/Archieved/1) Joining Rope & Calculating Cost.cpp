@@ -1,3 +1,14 @@
+/* 
+Algorithm: Follow the steps mentioned below to implement the idea:
+
+Create a min-heap and insert all lengths into the min-heap.
+Do following while the number of elements in min-heap is greater than one. 
+Extract the minimum and second minimum from min-heap
+Add the above two extracted values and insert the added value to the min-heap.
+Maintain a variable for total cost and keep incrementing it by the sum of extracted values.
+Return the value of total cost.
+
+*/
 
 // C++ program for connecting
 // n ropes with minimum cost
