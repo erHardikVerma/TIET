@@ -1,7 +1,7 @@
 --Lab Assignment 4 
 
 --q1
-select sysdate from dual
+--select sysdate from dual
 
 --q2
 --select to_char(sysdate, 'day') from dual;
