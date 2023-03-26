@@ -1,0 +1,34 @@
+--Lab Assignment4 Lab4 31Jan,2023
+
+--q4
+--create table S(SNo int primary key,SName varchar(25),City varchar(30))
+
+--insert into S values(1,'HardiK','Ludhiana')
+--insert into S values(2,'Naman','Mohali')
+--insert into S values(2,'Namit','Mumbai')
+
+--q5
+--create table P(PNo int primary key,PName varchar(25),Color varchar(30))
+
+--insert into P values(1,'Namit','Orange')
+--insert into P values(2,'Manav','Green')
+--select * from P
+
+--q6
+--CREATE TABLE SP(Sno INT REFERENCES S(Sno) ,Pno INT REFERENCES P(Pno) ,QTY INT , PRIMARY KEY(Sno , Pno))
+
+--INSERT INTO SP VALUES(1, 2 , 20)
+--INSERT INTO SP VALUES(3, 1 , 10)
+
+--select * from SP
+
+--q7
+--create table dept_lab4(DeptNo int primary key,DName varchar(20) ,check (DName in('acc','comp','elect')) )
+--insert into dept_lab4 values(1,'acc')
+--insert into dept_lab4 values(2,'comp')
+
+--select * from dept_lab4
+
+--q8
+create table Emp4(EmpNo int,Ename varchar(30),EJob varchar(25), 
+check (EJob in('Prof','AP','Lecture')),Salary int not NULL,DeptNo int references dept_lab4(DeptNo),primary key(EmpNo) );
