@@ -1,0 +1,46 @@
+1 bisection method
+2 secant method
+3 newton Raphson 
+4 fixed point iteration
+5 gauss elimination
+6 LU decomposition
+7 Jacobi 
+8 Gauss Seidel 
+
+Interpolation
+1 newton forward
+2 newton backward
+3 lagrange
+4 divided difference
+5 Piece wise interpolation
+
+Integration
+1 Trapezoidal
+2 simpson 1/3rd
+3 Guass Legendre
+
+IVP
+1euler
+2euler modified (1st , 2nd and 4th order)
+3runge kutta
+
+
+Pre MST Proofs
+1. Chopping max error bound 
+2. Rounding max error bound
+3. Max Error bound for bisection method
+4. Existence and uniqueness of fixed point iteration
+5. Convergence of FPI
+6. Order of convergence of bisection method
+7. Order of convergence of fixed point iteration for 
+8. Order of convergence of Newton's method
+9. Modified Newton method ki convergence
+
+List of proofs after MST syllabus:
+1. Lagrange interpolation error proof
+2. Newton divided differences (relation between divided and forward differences)
+3. Gauss legender one point, two point formula proofs
+And related questions
+
+Note:-
+QR Algo , SOR is not in the syllabus
