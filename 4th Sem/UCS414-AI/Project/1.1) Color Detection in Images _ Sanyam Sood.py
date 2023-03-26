@@ -61,3 +61,4 @@ cv2.imshow('img',final)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 cv2.imwrite('./6.jpg',final)
+
