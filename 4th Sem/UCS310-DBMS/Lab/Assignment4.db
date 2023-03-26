@@ -1,0 +1,80 @@
+--Lab Assignment 4 
+
+--q1
+select sysdate from dual
+
+--q2
+--select to_char(sysdate, 'day') from dual;
+
+--q3
+--select to_char(sysdate, 'month'), to_char(sysdate, 'year') from dual;
+
+--q4
+--select to_char(sysdate, 'DDSP Month Year') from dual;
+
+--q5
+--select to_char(sysdate,'am') from dual;
+--select to_char(sysdate,'pm') from dual;
+
+--q6
+--select next_day(sysdate, 'Friday') from dual;
+
+--q7
+--select round(sysdate, 'month') from dual;
+
+--q8
+--select trunc(sysdate, 'month') from dual;
+
+--q9
+--select round(sysdate, 'year') from dual;
+
+--q10
+--select trunc(sysdate, 'year') from dual;
+
+--q11
+--select (sysdate+3) from dual;
+
+--EMP Table
+--create table Emp(EmpNo int,Ename varchar(20),DOJ date)
+--insert into Emp values(1,'Hardik','13-Feb-2023')
+--insert into Emp values(2,'Namit','1-Feb-2023')
+--insert into Emp values(3,'Bhunesh','1-Jan-2023')
+
+--q12
+--select DOJ from emp
+--select to_char(DOJ ,'day') as DayofJoining from emp;
+
+--select * from emp
+--q13
+--select * from emp where to_char(DOJ, 'FMday') ='monday'
+
+--q14
+/* select * from emp 
+where to_char(DOJ, 'month')=to_char(sysdate, 'month') 
+and to_char(DOJ, 'year')=to_char(sysdate,'year') */
+
+--q15
+--select * from emp where DOJ between (sysdate-30) and sysdate;
+
+--Train Table 
+--q16
+--create table train(TrainNumber int,DateofDeparture Date,TimeofDeparture timestamp, TimeofArrival timestamp)
+
+--q17
+--insert into train values(2,'09-mar-2022','09-mar-2022,02:00:00 AM','10-mar-2022,02:30:00 PM');
+--insert into train values(1,'14-feb-2022','14-feb-2022,02:00:00','14-feb-2022,04:00:00');
+--insert into train values(3,'14-feb-2023','14-feb-2023,12:00:00 AM','16-feb-2023,09:30:00 PM');
+--insert into train values(4,'25-dec-2022','25-dec-2022,02:00:00 AM','25-dec-2022,02:30:00 PM');
+--insert into train values(5,'09-mar-2023','09-mar-2023,08:45:00 AM','09-mar-2023,02:30:00 PM');
+
+--q18
+--select * from train
+
+--q19
+--select TimeOfDeparture, TimeOfArrival from train
+
+--q20
+--select TrainNumber from train where timeofarrival like '%PM'
+
+--q21
+select TrainNumber from train where timeofdeparture between sysdate and to_timestamp(timeofdeparture,'hh24'+1)
