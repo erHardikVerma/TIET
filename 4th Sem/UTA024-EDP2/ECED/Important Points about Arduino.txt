@@ -1,0 +1,10 @@
+Q1) Why do we use resistors in an arduino(ATmega328P) circuit?
+Ans. -> 3.3 and 5v is to be regulated(standard for arduino) (in high state) , so we use rseistor.
+     -> Low state = 0v
+
+2) Standard unit = ms(milliseconds)
+
+3) Loop = (high, delay, low, delay)
+
+4) ATmega328P nomenclature?
+Ans: -> P represents Picopower
