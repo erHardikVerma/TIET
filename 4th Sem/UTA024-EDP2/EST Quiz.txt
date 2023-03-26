@@ -1,0 +1,51 @@
+The quiz test of UTA024 will be scheduled in the 1st week of April 2023. The exact date will be circulated soon.
+
+ 
+
+Syllabus of Quiz Test:
+
+ECED lab:
+
+v  Semiconductor material and characteristics,
+
+v  Types, the principle of operation, construction detail, characteristics, and applications of Semiconductor components
+
+·         Diode,
+
+·         Transistor (BJT)
+
+·         Op-Amp
+
+v  Types, the principle of operation, construction detail, characteristics, and applications of passive components
+
+·         Resistance
+
+·         Capacitance
+
+·         Inductance
+
+v  Types, the principle of operation, construction detail, characteristics, and applications of the following devices
+
+·         Sensor
+
+·         Actuator
+
+·         Microcontroller
+
+Note: The syllabus of the CSED lab for the quiz test will be shared by Dr. Ashutosh Mishra.
+
+
+
+CSED Lab:
+
+Arduino Microcontroller,
+Arduino Programming,
+IR and Ultrasonic sensor,
+Nvis Robocar,
+Zigbee communication, 
+bronze challenges and
+Lab experiments based questions. 
+
+The course content PPTs and Video lectures have been uploaded in LMS.
+
+Kindly, circulate this information among your respective batches.
