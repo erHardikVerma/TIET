@@ -1,0 +1,55 @@
+# Define a function to find the shortest path using A* algorithm
+def astar(start, end, graph):
+    # Create empty sets for open and closed nodes
+    open_nodes = set()
+    closed_nodes = set()
+
+    # Set the starting node as current and add it to the open nodes set
+    current = start
+    open_nodes.add(current)
+
+    # Define a dictionary to keep track of the g and f scores for each node
+    g_scores = {node: float('inf') for node in graph}
+    g_scores[start] = 0
+    f_scores = {node: float('inf') for node in graph}
+    f_scores[start] = heuristic(start, end)
+
+    # Start the search
+    while open_nodes:
+        # Get the node with the lowest f score
+        current = min(open_nodes, key=lambda node: f_scores[node])
+
+        # If we've reached the end node, return the path
+        if current == end:
+            path = []
+            while current in came_from:
+                path.append(current)
+                current = came_from[current]
+            path.append(start)
+            return path[::-1]
+
+        # Remove the current node from the open set and add it to the closed set
+        open_nodes.remove(current)
+        closed_nodes.add(current)
+
+        # Check each neighbor of the current node
+        for neighbor in graph[current]:
+            if neighbor in closed_nodes:
+                continue
+            # Calculate the tentative g score for the neighbor
+            tentative_g_score = g_scores[current] + distance(current, neighbor)
+
+            # If the neighbor is not in the open set, add it and calculate its f score
+            if neighbor not in open_nodes:
+                open_nodes.add(neighbor)
+                f_scores[neighbor] = tentative_g_score + heuristic(neighbor, end)
+            # Otherwise, if the new g score is lower, update the neighbor's g score and f score
+            elif tentative_g_score < g_scores[neighbor]:
+                f_scores[neighbor] = tentative_g_score + heuristic(neighbor, end)
+
+            # Update the came_from dictionary with the current node as the neighbor's parent
+            came_from[neighbor] = current
+            g_scores[neighbor] = tentative_g_score
+
+    # If we've searched all nodes and haven't found the end, there is no path
+    return None
