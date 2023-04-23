@@ -1,0 +1,14 @@
+declare
+marks number:=50;
+begin
+CASE true
+WHEN Marks>80 THEN DBMS_OUTPUT.PUT_LINE('A grade');
+WHEN Marks>70 THEN DBMS_OUTPUT.PUT_LINE('B grade');
+WHEN Marks>50 THEN DBMS_OUTPUT.PUT_LINE('C grade');
+WHEN Marks>40 THEN DBMS_OUTPUT.PUT_LINE('D grade');
+WHEN Marks>30 THEN DBMS_OUTPUT.PUT_LINE('E grade');
+ELSE
+DBMS_OUTPUT.PUT_LINE('FAIL');
+End CASE;
+End;
+/
