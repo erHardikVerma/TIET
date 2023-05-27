@@ -1,0 +1,73 @@
+IP Class A	1 to 126		255.0.0.0			1.1.1.1	
+IP Class B	128 to 191	255.255.0.0		128.1.1.1	16
+IP Class C	192 to 223	255.255.255.0		192.1.11.	24	
+
+Router to Router Connection - Serial Cable
+Router to Computer - FastEthernet Cable
+
+Syntax to configure IP address on VPCS:
+	PC1>ip 192.168.1.1 /24 192.168.1.100
+	PC1>ip dns 192.168.1.100
+	PC1>show ip
+	PC2> ping 192.168.1.1(ip of second VPC)
+	PC>clear ip
+
+Configuration for Router:
+	R1#conf t
+	R1(config)#int f0/0
+	R1(config-if)#ip add 100.1.1.2 255.255.255.0
+	R1(config-if)#no shut
+	R1(config-if)#int s1/1
+	R1(config-if)#ip address 20.1.1.1 255.255.255.0
+	R1(config-if)#no shut
+	R1(config-if)#exit
+
+RIP(Routing Information Protocol) Configuration Commands:
+	R1(config)#router rip
+	R1(config-router)#version 2
+	R1(config-router)#network 20.1.1.0
+	R1(config-router)#network 100.1.1.0
+
+DHCP(Dynamic Host Configuration Protocol) Server Configuration
+	R1#sh ip int b
+	R1#config t
+	R1(config)#ip dhcp pool xyz
+	R1(dhcp-config)#network 192.168.10.0 /24
+	R1(dhcp-config)#default-router 100.100.100.100(gatewayaddress)
+	R1(dhcp-config)#dns-server 1.2.3.4
+	R1(dhcp-config)#lease ?
+	R1(dhcp-config)#lease 0 3
+	R1(dhcp-config)#no ip bootp server
+	R1(config)#int fa0/0
+	R1(config-if)#ip add 192.168.10.1 255.255.255.0
+	R1(config-if)#no shut
+	R1(config-if)#exit
+
+
+Client 1:
+	PC1> ip dhcp
+	PC1> show ip
+
+Client 2:
+	PC2> ip dhcp
+	PC2> show ip
+
+Static Routing:
+	R1(config)#ip route 172.16.0.0(recevier) 255.255.0.0(revevier subnet mask) 10.0.0.2(sender)
+	R1(config)#exit
+	R1#show ip route
+
+OSPF(Open Shortest Path First)-Syntax:
+		Router(config)#router ospf <process id 1-65535>
+		Router(config-router)network <network address> <wild card mask> area <0-4294967295>
+
+	Router1(config)#router ospf 200
+	Router1(config-router)#network 10.0.0.0  0.255.255.255 area 0
+	Router1(config-router)#exit
+
+	Router#show ip ospf neighbor
+	Router#show ip ospf border-routers
+
+
+
+
