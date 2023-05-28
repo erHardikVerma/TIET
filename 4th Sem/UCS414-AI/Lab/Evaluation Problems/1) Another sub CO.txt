@@ -1,0 +1,93 @@
+Question:-) (by jugraj)
+input
+integers X and Y denoting the number of stair x wants to reach the number of stairs he can climb in one move
+
+output
+for each test case, output the minimum number of moves required by him to reach exactly the stair numbered x
+
+Solutions:-
+
+Sol:-1)
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+ 
+
+def countWays(s):
+    return fib(s + 1)
+ 
+s = 4
+print "Number of ways = ",
+print countWays(s)
+
+
+
+
+
+
+
+
+
+
+Sol:-2) 
+    def min_moves(x, y):
+    dp =  * (x + 1)
+    dp = 0
+    for i in range(1, x + 1):
+        k = i // y
+        dp[i] = float('inf')
+        for j in range(k+1):
+            if i - j*y >= 0:
+                dp[i] = min(dp[i], dp[i-j*y] + j)
+        dp[i] = min(dp[i], dp[i-1] + 1)
+    return dp[x]
+
+Output:-) min_moves(10, 3)
+
+
+
+
+
+
+
+
+
+
+Sol:-3) 
+def min_moves_to_reach_stair(x, y):
+    if x % y == 0:
+        return x // y
+    else:
+        return x // y + 1
+
+# Input
+x = int(input("Enter the number of stairs X wants to reach: "))
+y = int(input("Enter the number of stairs X can climb in one move: "))
+
+# Output
+result = min_moves_to_reach_stair(x, y)
+print(f"The minimum number of moves required to reach stair {x} is: {result}")
+
+
+
+
+
+
+
+
+
+
+Sol:4) 
+def min_moves_to_reach_stair(X, Y):
+    dp = [0] * (X+1)
+    dp[1] = 1
+    for i in range(2, X+1):
+        if i <= Y:
+            dp[i] = 1
+        else:
+            dp[i] = min(dp[i-Y], dp[i-1]) + 1
+    return dp[X]
+
+# Example usage:
+print(min_moves_to_reach_stair(10, 3)) # Output: 4
